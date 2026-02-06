@@ -1,10 +1,13 @@
 /*function signature/sample */
 function gonoVote(array) {
   //write your code here
+
+  //input Array checking:
   if (Array.isArray(array) === false) {
     return "Invalid";
   }
 
+  // vote counting:
   let haCount = 0;
   let naCount = 0;
 
@@ -15,7 +18,7 @@ function gonoVote(array) {
       naCount++;
     }
   }
-
+  // result check:
   if (haCount > naCount) {
     return true;
   } else if (haCount === naCount) {

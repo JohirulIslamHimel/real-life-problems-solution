@@ -13,6 +13,11 @@ function validOtp(otp) {
     return false;
   }
 
+  //space check:
+  if (otp.includes(" ")) {
+    return false;
+  }
+
   //must start with  "ph-":
 
   if (otp.startsWith("ph-")) {

@@ -7,7 +7,7 @@ function newPrice(currentPrice, discount) {
 
   //discount check:
 
-  if (discount < 0 || discount > 100) {
+  if (currentPrice < 0 || discount < 0 || discount > 100) {
     return "Invalid";
   }
 
