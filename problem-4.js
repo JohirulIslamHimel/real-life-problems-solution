@@ -7,14 +7,24 @@ function gonoVote(array) {
     return "Invalid";
   }
 
+  if (array.length === 0) {
+    return "Invalid";
+  }
+
   // vote counting:
   let haCount = 0;
   let naCount = 0;
 
   for (let vote of array) {
-    if (vote === "ha") {
+    if (typeof vote !== "string") {
+      continue;
+    }
+
+    let correctVote = vote.trim().toLowerCase();
+
+    if (correctVote === "ha") {
       haCount++;
-    } else if (vote === "na") {
+    } else if (correctVote === "na") {
       naCount++;
     }
   }

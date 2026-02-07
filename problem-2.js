@@ -31,7 +31,7 @@ function validOtp(otp) {
 
   return true;
 }
-let output1 = validOtp("ph-abcde");
+let output1 = validOtp("ph-12345");
 console.log(output1);
 let output2 = validOtp("ph-1234");
 console.log(output2);
