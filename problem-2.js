@@ -20,13 +20,18 @@ function validOtp(otp) {
 
   //must start with  "ph-":
 
-  if (otp.startsWith("ph-")) {
-    return true;
-  } else {
+  if (!otp.startsWith("ph-")) {
     return false;
   }
+  let number = otp.slice(3);
+
+  if (isNaN(number)) {
+    return false;
+  }
+
+  return true;
 }
-let output1 = validOtp("ph-10985");
+let output1 = validOtp("ph-abcde");
 console.log(output1);
 let output2 = validOtp("ph-1234");
 console.log(output2);

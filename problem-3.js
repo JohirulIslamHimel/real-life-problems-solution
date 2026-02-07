@@ -6,6 +6,7 @@ function finalScore(omr) {
   if (typeof omr !== "object" || omr === null || Array.isArray(omr)) {
     return "Invalid";
   }
+
   //value checking:
   if (
     typeof omr.right !== "number" ||

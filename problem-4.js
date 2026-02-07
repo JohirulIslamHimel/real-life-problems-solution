@@ -38,3 +38,5 @@ let output4 = gonoVote("ha, na");
 console.log(output4);
 let output5 = gonoVote(12345);
 console.log(output5);
+let output6 = gonoVote(["ha", "hi", 123]);
+console.log(output6);
